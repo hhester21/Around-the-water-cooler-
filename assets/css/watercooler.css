@@ -71,6 +71,22 @@ main{
 	/*background-image: url('../images/grey_wash_wall.png');*/
 }
 
+.topicDiv {
+  border: 1px solid black;
+  clear: left;
+  height: 100px;
+  margin-top: 10px;
+}
+
+img {
+  float:left;
+}
+
+button {
+  height:50px;
+  width:200px;
+}
+
 .secondaryHead {
 	height:80px;
 	width: 100%;
@@ -137,25 +153,7 @@ font-size: 20px;
   main {
     flex: 1 0 auto;
   }
-#weatherForecast li{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    margin: 15px 4%;
-}
-#weatherForecast h3 {
-    font-size: 1.4rem;
-    font-weight:600;
-    text-decoration: underline;
-}
-#weatherForecast h4{
-    font-size: 1.12rem;
-    font-weight:500;
-}
-#weatherForecast h5{
-    font-size: 0.9rem;
-    font-weight: 500;
-}
+
 
 #chartjsDiv {
     /*display: none;*/
