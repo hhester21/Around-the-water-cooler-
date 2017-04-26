@@ -1,9 +1,9 @@
-var tech = ["mashable" ,"techcrunch" , "ars-technica" , "hacker-news" , "techradar", "the-verge"];
+// var tech = ["mashable" ,"techcrunch" , "ars-technica" , "hacker-news" , "techradar", "the-verge"]; ---snippet from the previous API
 
 
 $(document).on("click", "#tech", function(e) {
-    $("#articles").empty();
-    e.preventDefault();
+    $("#articles").empty();  //onclick empties div that contains articles divs ,so when you click button it removes articles from the previous request and replaces them this the other ones 
+    e.preventDefault();  // prevent page from reload when clicking button I don't remember why I did it but there was a big reason for that 
 
 
     //some code from dealing with the first API
