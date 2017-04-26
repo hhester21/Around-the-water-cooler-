@@ -20,6 +20,15 @@ input[type=email], input[type=password], input[type=text] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    outline-style:none;
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
+    box-shadow:0 0 1.5px 1.5px #ccc;  
+}
+
+input[type=email]:focus::-webkit-input-placeholder ,input[type=password]:focus::-webkit-input-placeholder ,input[type=text]:focus::-webkit-input-placeholder {
+color: transparent;
 }
 
 button {
@@ -111,6 +120,8 @@ span.psw {
 
 .alerts {
     color: red;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -135,7 +146,7 @@ span.psw {
     <input type="text" placeholder="username (at least 6 characters)" class="inputfields" name="username" id="username">
 
     <label><b>Email</b></label>
-    <input type="email" placeholder="example@gmail.com" class="inputfields" name="email" id="email">
+    <input type="email" placeholder="user@gmail.com" class="inputfields" name="email" id="email">
 
     <label><b>Password</b></label>
     <input type="password" placeholder="password (at least 8 characters)" class="inputfields" name="password" id="password">
@@ -150,34 +161,36 @@ span.psw {
 <script>
 	$(document).on("click", "#submit", function(e) {
 		e.preventDefault();
-        
-		//alerts if any of the fields left empty
-		// if ($("#username").val() === "") {
-		// 	$("#username").attr("id","username2").attr("placeholder","<----------------------------  Type a username!  ---------------------------->");
-		// }
-		// if ($("#email").val() === "") {
-		// 	$("#email").attr("id","email2").attr("placeholder","<----------------------------  Type an email!  ---------------------------->");
-		// }
-		// if ($("#password").val() === "") {
-		// 	$("#password").attr("id","password2").attr("placeholder","<----------------------------  Type a password!  ---------------------------->");
-		// }    
+        $("#alertsDiv").empty();
+        var email = $("#email").val();
+        var regularExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-        //alerts if user form input didn't meet minimum requirments
         if ($("#username").val().length < 6) {
             $("#username").val("");
             $("#username").attr("placeholder","");
-            $("#alertsDiv").append("<p class='alerts'>" + "username should be at least 6 characters long" + "</p>"); 
+            $("#alertsDiv").append("<p class='alerts'>" + "Username should be at least 6 characters long" + "</p>"); 
             $("#username").css('border-color', 'red');
+            $("#username").css('box-shadow', '0 0 1.5px 1.5px red'); 
         }
+
+        if (regularExp.test(email) === false) {
+            $("#email").val("");
+            $("#email").attr("placeholder","");
+            $("#alertsDiv").append("<p class='alerts'>" + "Please enter a valid email address" + "</p>");
+            $("#email").css('border-color', 'red');
+            $("#email").css('box-shadow', '0 0 1.5px 1.5px red'); 
+        }
+
         if ($("#password").val().length < 8) {
             $("#password").val("");
             $("#password").attr("placeholder","");
-            $("#alertsDiv").append("<p class='alerts'>" + "password should be at least 8 characters long" + "</p>"); 
+            $("#alertsDiv").append("<p class='alerts'>" + "Password should be at least 8 characters long" + "</p>"); 
             $("#password").css('border-color', 'red');
+            $("#password").css('box-shadow', '0 0 1.5px 1.5px red');
         }
 
         //if user met input requirements it will create and array with his credentials
-        if ($("#username").val().length >= 6 && $("#password").val().length >= 8 ) {
+        if ($("#username").val().length >= 6 && $("#password").val().length >= 8 && regularExp.test(email)) {
             var objArray = $("#myForm").serializeArray();
             console.log(objArray);
             $(".inputfields").val("");
