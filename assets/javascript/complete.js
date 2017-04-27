@@ -27,6 +27,7 @@ Javascript for Calling the newsapi.org API
   var targetFeed2 = $('#feed-2');
   var targetFeed3 = $('#feed-3');
 
+  // Variables for removing feeds
   var removeFeed1 = $('#remove-feed-1');
   var removeFeed2 = $('#remove-feed-2');
   var removeFeed3 = $('#remove-feed-3');
@@ -56,6 +57,10 @@ Javascript for Calling the newsapi.org API
       });
       feed3 = true;
       $('#add-feed').removeClass('btn-info');
+      $('#add-feed').attr({
+        data-toggle: 'modal',
+        data-target: '#myModal',
+      });
     }
     else if((feed1 === false) && (feed2 === true) && (feed3 === false)){
       targetFeed1.fadeIn(1500);
@@ -88,20 +93,24 @@ Javascript for Calling the newsapi.org API
       $('#add-feed').removeClass('btn-info');
     }
     else if ((feed1 === true) && (feed2 === true) && (feed3 === true)){
-      
+      $('#myModal').show;
     }
   });
 
-$('#remove-fee')
   removeFeed1.on('click', function(){
     targetFeed1.fadeOut(1500);
-    feed1
+    feed1 = false;
+    $('#add-feed').addClass('btn-info');
   });
   removeFeed2.on('click', function() {
     targetFeed2.fadeOut(1500);
+    feed2 = false;
+    $('#add-feed').addClass('btn-info');
   });
   removeFeed3.on('click', function(){
     targetFeed3.fadeOut(1500);
+    feed3 = false;
+    $('#add-feed').addClass('btn-info');
   });
 
   
@@ -164,7 +173,7 @@ $('#query-submit').on('click', function(event) {
     // Give the <img> tag an attribute 
         resultImage.attr('src',imageURL);
 
-      // Append the article image to the articleDiv...
+      // Append the article image to the articleDiv
         articleDiv.append(resultImage);
 
     // Append the title of the article to the articleDiv
@@ -172,9 +181,7 @@ $('#query-submit').on('click', function(event) {
         // console.log(title);
 
     // Append the author of the article to the articleDiv
-       articleDiv.append(authorText);
-
-  
+       articleDiv.append(authorText);  
 
     // and the contents of the articleDiv variable to the #articleArea <div>
         $('#articleArea').append(articleDiv);
