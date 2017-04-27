@@ -75,9 +75,6 @@ header {
 }
 
 
-
-
-/*Your footer smells like feet lolz 💀*/
 footer {
   background-color: orange;
   margin-left: -3%;
@@ -91,10 +88,8 @@ footer {
 
 
 
-
-
-
-
-
-
+#whoops {
+  font-weight: bolder;;
+  text-align: center;
+}
 

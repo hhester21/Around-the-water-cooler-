@@ -57,11 +57,11 @@ Javascript for Calling the newsapi.org API
       });
       feed3 = true;
       $('#add-feed').removeClass('btn-info');
-      $('#add-feed').attr({
-        data-toggle: 'modal',
-        data-target: '#myModal',
-      });
-    }
+      // $('#add-feed').attr({
+      //   'data-toggle': 'modal',
+      //   'data-target': '#myModal',
+      // });
+      }
     else if((feed1 === false) && (feed2 === true) && (feed3 === false)){
       targetFeed1.fadeIn(1500);
       targetFeed1.css({
@@ -93,7 +93,11 @@ Javascript for Calling the newsapi.org API
       $('#add-feed').removeClass('btn-info');
     }
     else if ((feed1 === true) && (feed2 === true) && (feed3 === true)){
-      $('#myModal').show;
+      $('#errorModal').modal({
+        backdrop: true,
+        keyboard: true,
+        focus: true,
+        show: true});
     }
   });
 
