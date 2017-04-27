@@ -1,135 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Around the Watercooler</title>
-
-<!--*************Linked Stylesheets******************-->
-
+    <title>Around the Water Cooler</title>
+    <!--*************Linked Stylesheets******************-->
     <!-- Normalize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" type="text/css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 
     <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
-    <link href="assets/css/watercooler.css" rel="stylesheet">
+    
+    <!--Materialize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--CSS for Materialize Overrides-->
+    <link rel="stylesheet" type="text/css" href="assets/css/watercooler.css">
 
-</head>
+    <!--Carousel-->
+    <link rel="stylesheet" type="text/js" href="assets/javascript/carousel.js">
+  </head>
 
-<body>
-<!--Wrapper for Toggling DO NOT TOUCH-->
-    <div id="wrapper" class="toggled">   
+  <body>
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Subject Selection
-                    </a>
-                </li>
-                <button>
-                <li>
-                    <a href="#">Category</a>
-                </li>
-              </button>
-              <button>
-                <li>
-                    <a href="#">Category</a>
-                </li>
-              </button>
-              <button>
-                <li>
-                    <a href="#">Category</a>
-                </li>
-              </button>
-              <button>
-                <li>
-                    <a href="#">Category</a>
-                </li>
-              </button>
-              <button>
-                <li>
-                    <a href="#">Category</a>
-                </li>
-              </button>
-              <button>
-                <li>
-                    <a href="#">Category</a>
-                </li>
-              </button>
-  <!--Reset Button: Someone fix this-->
-                <li>
+<!--Sidebar and Header-->
+  <header>
+    <!--Top Header-->
+    <nav class="top-nav light-blue darken-4">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a class="page-title">Around the water cooler</a>
+        </div>
+      </div>
+    </nav>
+    <!--Collapsible Button-->
+    <div class="container">
+      <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+    <!--Side Bar Menu-->
+    <ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform translateX(0%);">
+      
+      <!--Subject Selection-->
+      <li>
+        <h6>Subjects</h6>
+      </li>
+      <li>
+         <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+         <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+      <!--Buttons-->
+      <!--Reset Button-->
+      <li>
         <span class="resetText">Reset</span><button id="resetButton" class="btn-floating red accent-4 waves-effect waves-light" type="submit" name="action"><i class="material-icons">refresh</i></button>
       </li>
-            </ul>
+  </ul>
+
+  <!--Main Site Container (Charts)-->
+  <main>
+    <div class="container mainDataContainer">
+      <!--Subtitle-->
+      <div class="row" id="subtitleRow">
+        <div class="col s12">
+          <p>User customized </p>
         </div>
-        <!-- /#sidebar-wrapper -->
+      </div>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-12">
-                <header>
+      <!-- Sign in Modal-->
+      <div id="sign in modal" class="modal">
+      <div class= "modal-content">
+      <h2>Sign in to save your prefrences</h2>
+      </div>
 
-        <!--Hamburger Menu Button-->
-                  <div class="pull-left" style="margin-left: 3%">
-                    <button class="btn btn-default btn-md btn-success" style="text-align: left; margin-bottom: 2%"><a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a></button>
-                  </div>
+      <!--Error Message-->
+      <div id="errorModal" class="modal">
+        <div class="modal-content">
+          <h4>Error Timeout</h4>
+          <p id="errorText"></p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-orange darken-4 btn-flat">Close</a>
+        </div>
+      </div>
+      <!--progress bar-->
+      <div class="row">
+        <div class="col s12">
+          <div class="progress">
+            <div class="indeterminate"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <!-Collapsible (charts are stored here)->
+      <div class="row">
+        <div class="col s12">
+          <ul class="collapsible" data-collapsible="accordion">
 
-        <!--Title and Sign-Up/Register Button-->
-                  <div>
-                    Around The Watercooler 
-  <button class="btn btn-primary btn-lg pull-right sign-up" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In / Register</button>
-                  </div>                  
-                </header>
+            <!-Chart.js Line Chart->
+            <li>
+              <div id="chartCollapsible" class="collapsible-header"><i class="material-icons">multiline_chart</i>Chart</div>
+              <div class="collapsible-body">
+                <div id="chartjsDiv">
+                  <canvas id="chartjs"></canvas>
+                </div>
               </div>
+            </li>
               </div>
-              <div class="row">
-                  <div class="col-lg-12">
-                    <div id="feed-area">
-                      <h1>User Feeds</h1>
-                      <p>User Feeds</p>
-                    </div>
-                  </div>
-              </div>
-            </div>
-        <div class="row">
-        <footer>
-                  Copyright 2017 ©Around The Water Cooler 
-        </footer>
-              </div>
-        <!-- /#page-content-wrapper -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </main>
 
-
-        <!--***************************** Modal ***********************************-->
+<!--***************************** Modal ***********************************-->
 
 <!-- Button to initialize modal -->
-<!-- <div class="container"> 
+<div class="container"> 
   <button class="btn btn-primary btn-lg" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In / Register</button>
-</div> -->
+</div>
   
 
 <!-- Modal begins -->
@@ -137,7 +149,7 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content"><br>
         <div class="bs-example bs-example-tabs">
-            <center><img src="assets/images/images.jpg" alt=""><br></center>
+            <center><img src="../images/images.jpg" alt=""><br></center>
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#Signintab" data-toggle="tab">Sign In</a></li>
               <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
@@ -264,27 +276,50 @@
     </div>
   </div>
 </div>
-</div>
-    </div>
-    <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->        
-    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+
+
+  <!--************************************** Footer *****************************************-->
+  <footer class="page-footer orange darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4 class="white-text">Creators:</h4>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!"></a>Darrell</li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Haley Hester</li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Artur </li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Omar Imam</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        ©2017 Around the Water Cooler
+      </div>
+    </div>
+  </footer>
+
+    <!--*************Linked Javascript*****************-->
+    <!--Bootstrap Javascript-->
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"> </script>
+    <!--jQuery-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"> </script>
+    <!--Font Awesome-->
+    <script src="https://use.fontawesome.com/7fa3cf30ae.js">  </script>
     <!--underscore.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"> </script>
     <!--Complete Javascript File-->
     <script src="assets/complete.js"> </script>
+    <!--Materialize Javascript-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!--Materialize button collapse screen (burger button)-->
+<script>
+ $(".button-collapse").sideNav();
+</script>
 
-    <!-- Menu Toggle Script DO NOT TOUCH -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
-</body>
-
+  </body>
 </html>
