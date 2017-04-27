@@ -33,7 +33,6 @@ $('#query-submit').on('click', function() {
       $.ajax({url:queryURL,method:"GET"})
 
     // When it completes the call and receives a response...
-
       .done(function(response){
         console.log(response);
       for(var i = 0; i < 10; i++){
@@ -91,4 +90,4 @@ $('#query-submit').on('click', function() {
       imageTags.css({'border-radius': '20%'});
       // console.log(title);
       });
-    });
+    
