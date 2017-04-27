@@ -1,5 +1,11 @@
+
 $(document).ready(function(){
-  console.log("READY!");
+
+/***************************************************************************************************************
+Javascript for Calling the newsapi.org API
+****************************************************************************************************************/
+
+   console.log("READY!");
   // Initialize variables
   var source = "";
   var sortBy = "";
@@ -9,9 +15,11 @@ $(document).ready(function(){
   var articleURL = ""; 
   var imageURL = "";
   var publishTime = "";
-  var userInput = $('#user-query-input').val();
+  var userInput = "";
  
-$('#query-submit').on('click', function() {
+$('#query-submit').on('click', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
   userInput = $('#user-query-input').val();
   console.log(userInput);
 });
@@ -89,10 +97,10 @@ $('#query-submit').on('click', function() {
       imageTags.css({'border-radius': '20%'});
       // console.log(title);
       });
-    });$('body').on('click', '.tab-content .checkbox', function () {
-    $(this).toggleClass('checked');
-    console.log(this);                
+    });
 });
+
+
 
 
 // On clicking the "Save My Preferences" button, get the topics and subtopics that the user picked.
