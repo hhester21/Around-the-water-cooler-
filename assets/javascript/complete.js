@@ -107,7 +107,9 @@ $('#query-submit').on('click', function(event) {
     });
 });
 
-
+/***************************************************************************************************************
+Javascript for Modal
+****************************************************************************************************************/
 $(document).ready(function(){
 
 // On clicking the "Save My Preferences" button, get the topics and subtopics that the user picked.
