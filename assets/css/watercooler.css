@@ -2,9 +2,14 @@ body {
   background-color: black;
   width: 100%;
 }
+
+#page-content-wrapper {
+  text-align: center;
+}
+
 header {
   background-color: blue;
-  color: white;
+  color: whitesmoke;
   font-size: 50px;
   margin-left: -5%;
   margin-right: -5%;
@@ -13,18 +18,20 @@ header {
   text-align: center;
 }
 
+.sign-up {
+  margin-top: 1%;
+  margin-right: 4%;
+  overflow: auto;
+}
+
 footer {
   background-color: orange;
   margin-left: -3%;
   margin-right: -10%;
+  margin-top: 50%;
   overflow: visible;
   padding: 3%;
   text-align: center;
   width: 150%;
 }
 
-.sign-up {
-  margin-top: 1%;
-  margin-right: 4%;
-  overflow: auto;
-}

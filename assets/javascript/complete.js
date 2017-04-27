@@ -16,6 +16,13 @@ Javascript for Calling the newsapi.org API
   var imageURL = "";
   var publishTime = "";
   var userInput = "";
+  var feedCreate = "";
+
+  $('#add-feed').on('click', function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    $('#feed-area').append('<div>')
+  });
  
 $('#query-submit').on('click', function(event) {
   event.preventDefault();
@@ -101,7 +108,7 @@ $('#query-submit').on('click', function(event) {
 });
 
 
-
+$(document).ready(function(){
 
 // On clicking the "Save My Preferences" button, get the topics and subtopics that the user picked.
 $("#submit").on("click", function() {
@@ -179,4 +186,5 @@ $("#submit").on("click", function() {
                 console.log("numSubMenus[z]: ", numSubMenus[z]);
         } 
     }   
+});
 });
