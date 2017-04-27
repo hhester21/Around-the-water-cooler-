@@ -26,10 +26,7 @@ Javascript for Calling the newsapi.org API
   var targetFeed2 = $('#feed-2');
   var targetFeed3 = $('#feed-3');
 
-  if ((feed1 === true) && (feed2 === true) && (feed3 === true)){
-      $('#add-feed').removeClass('btn-danger');
-      $('#add-feed').addClass('btn-default');
-    }
+  
 
   $('#add-feed').on('click', function(event){
     event.preventDefault();
@@ -50,6 +47,7 @@ Javascript for Calling the newsapi.org API
         "display" : "inline",
       });
       feed3 = true;
+      $('#add-feed').removeClass('btn-danger');
     }
     else if((feed1 === false) && (feed2 === true) && (feed3 === false)){
       targetFeed1.css({
@@ -62,6 +60,7 @@ Javascript for Calling the newsapi.org API
         "display" : "inline",
       });
       feed1 = true;
+      $('#add-feed').removeClass('btn-danger');
     }
     else if((feed1 === false) && (feed2 === false) && (feed3 === true)){
       targetFeed1.css({
@@ -74,10 +73,14 @@ Javascript for Calling the newsapi.org API
         "display" : "inline",
       });
       feed2 = true;
+      $('#add-feed').removeClass('btn-danger');
     }
-    
-    $('#feed-area').append("WHOAAA");
+    else if ((feed1 === true) && (feed2 === true) && (feed3 === true)){
+      
+    }
   });
+
+  
  
 $('#query-submit').on('click', function(event) {
   event.preventDefault();
