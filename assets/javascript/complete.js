@@ -32,48 +32,55 @@ Javascript for Calling the newsapi.org API
     event.preventDefault();
     event.stopPropagation();
     if ((feed1 === false) && (feed2 === false) && (feed3 === false)){
+      targetFeed1.fadeIn(1500);
       targetFeed1.css({
         "display" : "inline",});
       feed1 = true;
     }
     else if((feed1 === true) && (feed2 === false) && (feed3 === false)){
+      targetFeed2.fadeIn(1500);
       targetFeed2.css({
         "display" : "inline",
       });
       feed2 = true;
     }
     else if((feed1 === true) && (feed2 === true) && (feed3 === false)){
+      targetFeed3.fadeIn(1500);
       targetFeed3.css({
         "display" : "inline",
       });
       feed3 = true;
-      $('#add-feed').removeClass('btn-danger');
+      $('#add-feed').removeClass('btn-info');
     }
     else if((feed1 === false) && (feed2 === true) && (feed3 === false)){
+      targetFeed1.fadeIn(1500);
       targetFeed1.css({
         "display" : "inline",
       });
       feed1 = true;
     }
     else if((feed1 === false) && (feed2 === true) && (feed3 === true)){
+      targetFeed1.fadeIn(1500);
       targetFeed1.css({
         "display" : "inline",
       });
       feed1 = true;
-      $('#add-feed').removeClass('btn-danger');
+      $('#add-feed').removeClass('btn-info');
     }
     else if((feed1 === false) && (feed2 === false) && (feed3 === true)){
+      targetFeed1.fadeIn(1500);
       targetFeed1.css({
         "display" : "inline",
       });
       feed1 = true;
     }
     else if((feed1 === true) && (feed2 === false) && (feed3 === true)){
+      targetFeed2.fadeIn(1500);
       targetFeed2.css ({
         "display" : "inline",
       });
       feed2 = true;
-      $('#add-feed').removeClass('btn-danger');
+      $('#add-feed').removeClass('btn-info');
     }
     else if ((feed1 === true) && (feed2 === true) && (feed3 === true)){
       

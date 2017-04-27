@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background-color: blue;
+  background-color: grey;
   color: whitesmoke;
   font-size: 50px;
   margin-left: -5%;
@@ -24,22 +24,54 @@ header {
   overflow: auto;
 }
 
+#sidebar-wrapper {
+  padding: 1%;
+}
+
+#feed-area {
+  width: 100%;
+}
+
 #feed-1 {
+  border-color: silver;
+  border-radius: 25%;
+  border-style: outset;
+  border-width: 5px;
   color: pink;
   display: none;
+  margin-right: 5px;
+  overflow: auto;
+  padding: 3%;
   text-align: center;
+  width: 100%;
 }
 
 #feed-2 {
+  border-color: silver;
+  border-radius: 25%;
+  border-style: outset;
+  border-width: 5px;
   color: skyblue;
   display: none;
+  overflow: auto;
+  padding: 3%;
   text-align: center;
+  width: 100%;
 }
 
 #feed-3 {
+  border-color: silver;
+  border-radius: 25%;
+  border-style: outset;
+  border-width: 5px;
   color: #00ff00;
   display: none;
+  margin-left: 5px;
+  margin-right: -10px;
+  overflow: auto;
+  padding: 3%;
   text-align: center;
+  width: 100%;
 }
 
 footer {
