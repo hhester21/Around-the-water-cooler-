@@ -22,9 +22,14 @@ Javascript for Calling the newsapi.org API
   var feed2 = false;
   var feed3 = false;
 
+  // Variables to target feeds
   var targetFeed1 = $('#feed-1');
   var targetFeed2 = $('#feed-2');
   var targetFeed3 = $('#feed-3');
+
+  var removeFeed1 = $('#remove-feed-1');
+  var removeFeed2 = $('#remove-feed-2');
+  var removeFeed3 = $('#remove-feed-3');
 
   
 
@@ -85,6 +90,18 @@ Javascript for Calling the newsapi.org API
     else if ((feed1 === true) && (feed2 === true) && (feed3 === true)){
       
     }
+  });
+
+$('#remove-fee')
+  removeFeed1.on('click', function(){
+    targetFeed1.fadeOut(1500);
+    feed1
+  });
+  removeFeed2.on('click', function() {
+    targetFeed2.fadeOut(1500);
+  });
+  removeFeed3.on('click', function(){
+    targetFeed3.fadeOut(1500);
   });
 
   
