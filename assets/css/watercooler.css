@@ -24,6 +24,24 @@ header {
   overflow: auto;
 }
 
+#feed-1 {
+  color: pink;
+  display: none;
+  text-align: center;
+}
+
+#feed-2 {
+  color: skyblue;
+  display: none;
+  text-align: center;
+}
+
+#feed-3 {
+  color: #00ff00;
+  display: none;
+  text-align: center;
+}
+
 footer {
   background-color: orange;
   margin-left: -3%;

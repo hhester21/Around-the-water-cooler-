@@ -16,12 +16,67 @@ Javascript for Calling the newsapi.org API
   var imageURL = "";
   var publishTime = "";
   var userInput = "";
-  var feedCreate = "";
+
+  // Visibility Variables
+  var feed1 = false;
+  var feed2 = false;
+  var feed3 = false;
+
+  var targetFeed1 = $('#feed-1');
+  var targetFeed2 = $('#feed-2');
+  var targetFeed3 = $('#feed-3');
+
+  if ((feed1 === true) && (feed2 === true) && (feed3 === true)){
+      $('#add-feed').removeClass('btn-danger');
+      $('#add-feed').addClass('btn-default');
+    }
 
   $('#add-feed').on('click', function(event){
     event.preventDefault();
     event.stopPropagation();
-    $('#feed-area').append('<div>')
+    if ((feed1 === false) && (feed2 === false) && (feed3 === false)){
+      targetFeed1.css({
+        "display" : "inline",});
+      feed1 = true;
+    }
+    else if((feed1 === true) && (feed2 === false) && (feed3 === false)){
+      targetFeed2.css({
+        "display" : "inline",
+      });
+      feed2 = true;
+    }
+    else if((feed1 === true) && (feed2 === true) && (feed3 === false)){
+      targetFeed3.css({
+        "display" : "inline",
+      });
+      feed3 = true;
+    }
+    else if((feed1 === false) && (feed2 === true) && (feed3 === false)){
+      targetFeed1.css({
+        "display" : "inline",
+      });
+      feed1 = true;
+    }
+    else if((feed1 === false) && (feed2 === true) && (feed3 === true)){
+      targetFeed1.css({
+        "display" : "inline",
+      });
+      feed1 = true;
+    }
+    else if((feed1 === false) && (feed2 === false) && (feed3 === true)){
+      targetFeed1.css({
+        "display" : "inline",
+      });
+      feed1 = true;
+    }
+    else if((feed1 === true) && (feed2 === false) && (feed3 === true)){
+      targetFeed2.css ({
+        "display" : "inline",
+      });
+      feed2 = true;
+    }
+    
+    $('#feed-area').append("WHOAAA");
   });
  
 $('#query-submit').on('click', function(event) {
