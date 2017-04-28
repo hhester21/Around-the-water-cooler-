@@ -5,8 +5,16 @@
 
     
 
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--google fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
 
     <!-- Normalize.css (Used instead of the reset.css that we were shown in class, it's kept up to date to work on all modern browsers)-->
     <link rel="stylesheet" href="normalize.css" type="text/css">
@@ -17,7 +25,20 @@
     <!-- CSS (mainly used for materialize overrides)-->
     <link rel="stylesheet" type="text/css" href="assets/css/watercooler.css">
 
+<<<<<<< HEAD:Old HTML Files/index.html
    
+=======
+     <link rel="stylesheet" type="text/js" href="assets/javascript/carousel.js">
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- bootstrap javascript-->
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+    <!--Firebase-->
+    <script src= ></script>
+>>>>>>> e1b47865dc2c646e7355a3e2e9e5688df4b2c533:index.html
   </head>
 
 <body>
@@ -111,7 +132,7 @@
       <div class="row">
         <div class="col s12">
           <ul class="collapsible" data-collapsible="accordion">
-            <!--Map Chart-->
+
             <!--Chart.js Line Chart-->
             <li>
               <div id="chartCollapsible" class="collapsible-header"><i class="material-icons">multiline_chart</i>Chart</div>
@@ -121,11 +142,15 @@
                 </div>
               </div>
             </li>
+<<<<<<< HEAD:Old HTML Files/index.html
             <!--Forecast - Future Enhancement-->
             <li>
               <div id="forecastCollapsible" class="collapsible-header"><i class="material-icons">filter_drama</i>Forecast</div>
               <div class="collapsible-body">
                 <ul id="weatherForecast"></ul>
+=======
+
+>>>>>>> e1b47865dc2c646e7355a3e2e9e5688df4b2c533:index.html
               </div>
             </li>
           </ul>
@@ -140,7 +165,7 @@
         <div class="col s12">
           <h4 class="white-text">Creators:</h4>
               <ul>
-                <li><a class="grey-text text-lighten-3" href="#!"></a>Darrell</li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a>Daryl</li>
                 <li><a class="grey-text text-lighten-3" href="#!"></a> Haley Hester</li>
                 <li><a class="grey-text text-lighten-3" href="#!"></a> Artur Solyanyk</li>
                 <li><a class="grey-text text-lighten-3" href="#!"></a> Omar Imam</li>
@@ -181,8 +206,11 @@
     <script src= ></script>
 
 
+<<<<<<< HEAD:Old HTML Files/index.html
 <!--API Calls and Modals-->
   <script src="assets/complete.js"></script>
+=======
+>>>>>>> e1b47865dc2c646e7355a3e2e9e5688df4b2c533:index.html
 
 <!--Underscore.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
@@ -190,6 +218,163 @@
 
 
 
+<<<<<<< HEAD:Old HTML Files/index.html
  
+=======
+.modal-dialog {
+    width: 20%;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Button to initialize modal -->
+<div class="container"> 
+  <button class="btn btn-primary btn-lg" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In / Register</button>
+</div>
+  
+
+<!-- Modal begins -->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content"><br>
+        <div class="bs-example bs-example-tabs">
+            <center><img src="../images/images.jpg" alt=""><br></center>
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#Signintab" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+              <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in" id="why">
+        <p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+        <p><br> Please contact <a mailto:href="nclespaul@yahoo.com">nclespaul@yahoo.com</a> for any other inquiries.</p>
+        </div>
+        <!-- Sign In Tab begins -->
+        <div class="tab-pane fade active in" id="Signintab">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">User Name:</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control input-medium" placeholder="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control input-medium" type="password" placeholder="********">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div><br>
+            <p>Forgot your <a href="#">username</a> or <a href="#">password</a>?</p>
+            </fieldset>
+            </form>
+        </div>
+    <!-- Sign In Tab ends -->
+
+    <!--Register section begins -->
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="getEmail" name="getEmail" class="form-control input-large" type="text" placeholder="user@gmail.com" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">User Name:</label>
+              <div class="controls">
+                <input id="getUserid" name="getUserid" class="form-control input-large" type="text" placeholder="" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="getPassword" name="getPassword" class="form-control input-large" type="password" placeholder="********" required="">
+                <em>1-8 Characters</em>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+              <div class="controls">
+                <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********" required="">
+              </div>
+            </div>
+            
+            <!-- Multiple Radios (inline) -->
+            <br>
+            <div class="control-group">
+              <label class="control-label" for="humancheck">Humanity Check:</label>
+              <div class="controls">
+                <label class="radio inline" for="humancheck-0">
+                  <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
+                <label class="radio inline" for="humancheck-1">
+                  <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+>>>>>>> e1b47865dc2c646e7355a3e2e9e5688df4b2c533:index.html
 </body>
 </html>
