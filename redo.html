@@ -210,7 +210,7 @@
   </div>
 </div>
 
-<!--***************** 'Add a Feed' Modal  ********************-->
+<!--************** 'Add a Feed' Modal  *************-->
 <div class="modal fade" id="add-a-feed-modal" tabindex="-1" role="dialog" aria-labelledby="add-a-feed-modal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -219,7 +219,29 @@
         <h4 class="modal-title" id="add-a-feed-modal-title">Add a Feed!</h4>
       </div>
       <div class="modal-body">
-        ...
+        <div class="row">
+          <div class="col-lg-6">
+        <select name="source">
+          <option value="abc-news-au">ABC News Australia</option>
+          <option value="associated-press">Associated Press</option>
+          <option value="bbc-news">BBC News</option>
+        </select>
+      </div>
+      <div class="col-lg-6">
+        <select name="category">
+          <option value="">All</option>
+          <option value="business">Business</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="gaming">Gaming</option>\
+          <option value="general">General</option>
+          <option value="music">Music</option>
+          <option value="politics">Politics</option>}
+          <option value="science-and-nature">Science & Nature</option>
+          <option value="sport">Sports</option>
+          <option value="technology">Technology</option>
+        </select>
+      </div>
+    </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
