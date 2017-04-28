@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Around the Watercooler</title>
+
+<!--*************Linked Stylesheets******************-->
+
+    <!-- Normalize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" type="text/css">
+
+    <!-- Tether for Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+    <link href="assets/css/watercooler.css" rel="stylesheet">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!--Wrapper for Toggling DO NOT TOUCH-->
+    <div id="wrapper" class="toggled"> 
+
+<!--******************* Modal ************************-->
+
+<!-- Button to initialize modal -->
+<!-- <div class="container"> 
+  <button class="btn btn-primary btn-lg" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In / Register</button>
+</div> -->
+  
+
+<!-- Modal begins -->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content"><br>
+        <div class="bs-example bs-example-tabs">
+            <center><img src="assets/images/images.jpg" alt=""><br></center>
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#Signintab" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+              <li class=""><a href="#signout" data-toggle="tab">Signout</a></li>
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in" id="signout">
+            <div class="control-group">
+                <label class="control-label" for="signout"></label>
+                <div class="controls">
+                  <button id="signout" name="signout" class="btn btn-success">Signout</button>
+                </div>
+            </div>
+        </div>
+        <!-- Sign In Tab begins -->
+        <div class="tab-pane fade active in" id="Signintab">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            
+            <div class="control-group">
+              <label class="control-label" for="emailinput">Email:</label>
+              <div class="controls">
+                <input id="emailinput" name="emailinput" class="form-control input-large" type="text">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">User Name:</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control input-medium" placeholder="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control input-medium" type="password" placeholder="********">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Sign in button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div>
+            <br>
+            <p>Forgot your <a href="#">username</a> or <a href="#">password</a>?</p>
+            </fieldset>
+            </form>
+        </div>
+    <!-- Sign In Tab ends -->
+
+    <!--Register section begins -->
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="getEmail">Email:</label>
+              <div class="controls">
+                <input id="getEmail" name="getEmail" class="form-control input-large" type="text" placeholder="user@gmail.com" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="getUserid" >User Name:</label>
+              <div class="controls">
+                <input id="getUserid" name="getUserid" class="form-control input-large" type="text" placeholder="" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="getPassword">Password:</label>
+              <div class="controls">
+                <input id="getPassword" name="getPassword" class="form-control input-large" type="password" placeholder="********" required="">
+                <em>1-8 Characters</em>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+              <div class="controls">
+                <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********" required="">
+              </div>
+            </div>
+            
+            <!-- Multiple Radios (inline) -->
+            <br>
+            <div class="control-group">
+              <label class="control-label" for="humancheck">Humanity Check:</label>
+              <div class="controls">
+                <label class="radio inline" for="humancheck-0">
+                  <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
+                <label class="radio inline" for="humancheck-1">
+                  <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>  
+
+  <!-- ************** Sidebar *************************-->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Subject Selection
+                    </a>
+                </li>
+                <button>
+                <li>
+                    <a href="#">Category</a>
+                </li>
+              </button>
+              <button>
+                <li>
+                    <a href="#">Category</a>
+                </li>
+              </button>
+              <button>
+                <li>
+                    <a href="#">Category</a>
+                </li>
+              </button>
+              <button>
+                <li>
+                    <a href="#">Category</a>
+                </li>
+              </button>
+              <button>
+                <li>
+                    <a href="#">Category</a>
+                </li>
+              </button>
+              <button>
+                <li>
+                    <a href="#">Category</a>
+                </li>
+              </button>
+  <!--Reset Button: Someone fix this-->
+                <li>
+        <span class="resetText">Reset</span><button id="resetButton" class="btn-floating red accent-4 waves-effect waves-light" type="submit" name="action"><i class="material-icons">refresh</i></button>
+      </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+  <!--**************** Page Content **************-->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                <header>
+
+  <!--********Hamburger Menu Button********-->
+                  <div class="pull-left" style="margin-left: 3%">
+                    <button class="btn btn-default btn-md btn-success" style="text-align: left; margin-bottom: 2%"><a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a></button>
+                  </div>
+
+  <!--******** Title and Sign-Up/Register Button ********-->
+                  <div>
+                    Around The Watercooler 
+  <button class="btn btn-primary btn-lg pull-right sign-up" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In / Register</button>
+                  </div>                  
+                </header>
+              </div>
+              </div>
+
+  <!--***************** User Feed Area ***************-->
+              
+
+              <div id="feed-heading">
+                      <h1>User Feeds</h1>
+                      <button id="add-feed" type="button" class="btn btn-default btn-info">Add A Feed</button>
+              </div>
+              <br>
+              <br>
+              <div class="row" style="overflow-x: hidden; overflow-y: scroll;">
+                  <div class="col-lg-12">
+                    <div class="col-lg-4 pull-left" id="feed-1">
+                      <p>a;dis fja;sjfaow;eijfaiosdfak;dsj;flk;dlkfj as;odkf jnan;e skjfna o;weijksfnaleksjfnalksjdnf
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <button type="button" class="btn btn-danger">Remove Feed</button>
+                    </div>
+                    <!-- <div class="col-lg-1"> </div> -->
+                    <div class="col-lg-4 pull-left" id="feed-2">
+                      <p>a;disfja;sjfaow;eijfaiosd fak;dsj;flkajsd;lfkjas;d lkfjas;odkfj nan;eskjfnao;weijksfnal eksjfnalksjdnf
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <button type="button" class="btn btn-danger">Remove Feed</button>
+                    </div>
+                    <div class="col-lg-4 pull-right" id="feed-3">
+                      <p>a;disfja;sjfaow; eijfaiosdfak;dsj;fl kajsd;lfkjas;dl kfjas;od kfjnan;eskjfnao;weijksfnaleks jfnalksjdnf
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <button type="button" class="btn btn-danger">Remove Feed</button>
+                    </div>
+                  </div>
+              </div>
+        <div class="row">
+        <footer>
+                  Copyright 2017 ©Around The Water Cooler 
+        </footer>
+              </div>
+        <!-- /#page-content-wrapper -->
+
+
+  
+</div>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--Tether Javascript for Bootstrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->        
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <!--underscore.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"> </script>
+    <!--Complete Javascript File-->
+    <script src="assets/javascript/complete.js"> </script>
+
+    <!-- Menu Toggle Script DO NOT TOUCH -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+
+
+    </script>
+
+</body>
+
+</html>

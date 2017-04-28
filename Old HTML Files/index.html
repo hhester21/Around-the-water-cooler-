@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Around the water cooler </title>
+
+    
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Normalize.css (Used instead of the reset.css that we were shown in class, it's kept up to date to work on all modern browsers)-->
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+
+    <!--Materialize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+    <!-- CSS (mainly used for materialize overrides)-->
+    <link rel="stylesheet" type="text/css" href="assets/css/watercooler.css">
+
+   
+  </head>
+
+<body>
+  <!--Sidebar and Header-->
+  <header>
+    <!--Top Header-->
+    <nav class="top-nav light-blue darken-4">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a class="page-title">Around the Water Cooler</a>
+        </div>
+      </div>
+    </nav>
+    <!--Collapsible Button-->
+    <div class="container">
+      <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+        <i class="material-icons">Menu</i>
+      </a>
+    </div>
+    <!--Side Bar Menu-->
+    <ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform translateX(0%);">
+      
+      <!--Subject Selection-->
+      <li>
+        <h6>Subjects</h6>
+      </li>
+      <li>
+         <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+         <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class="" src= alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+      <!--Buttons-->
+      <!--Reset Button-->
+      <li>
+        <span class="resetText">Reset</span><button id="resetButton" class="btn-floating red accent-4 waves-effect waves-light" type="submit" name="action"><i class="material-icons">refresh</i></button>
+      </li>
+
+  </header>
+
+<!--Main Site Container (Charts)-->
+  <main>
+    <div class="container mainDataContainer">
+      <!--Subtitle-->
+      <div class="row" id="subtitleRow">
+        <div class="col s12">
+          <p>User customized </p>
+        </div>
+      </div>
+
+      <!-- Sign in Modal-->
+      <div id="sign in modal" class="modal">
+      <div class= "modal-content">
+      <h2>Sign in to save your prefrences</h2>
+      </div>
+
+      <!--Error Message-->
+      <div id="errorModal" class="modal">
+        <div class="modal-content">
+          <h4>Error Timeout</h4>
+          <p id="errorText"></p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-orange darken-4 btn-flat">Close</a>
+        </div>
+      </div>
+      <!--progress bar-->
+      <div class="row">
+        <div class="col s12">
+          <div class="progress">
+            <div class="indeterminate"></div>
+          </div>
+        </div>
+      </div>
+      <!--Collapsible (charts are stored here)-->
+      <div class="row">
+        <div class="col s12">
+          <ul class="collapsible" data-collapsible="accordion">
+            <!--Map Chart-->
+            <!--Chart.js Line Chart-->
+            <li>
+              <div id="chartCollapsible" class="collapsible-header"><i class="material-icons">multiline_chart</i>Chart</div>
+              <div class="collapsible-body">
+                <div id="chartjsDiv">
+                  <canvas id="chartjs"></canvas>
+                </div>
+              </div>
+            </li>
+            <!--Forecast - Future Enhancement-->
+            <li>
+              <div id="forecastCollapsible" class="collapsible-header"><i class="material-icons">filter_drama</i>Forecast</div>
+              <div class="collapsible-body">
+                <ul id="weatherForecast"></ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Footer-->
+  <footer class="page-footer orange darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4 class="white-text">Creators:</h4>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!"></a>Darrell</li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Haley Hester</li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Artur Solyanyk</li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Omar Imam</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      ©2017 Around the Water Cooler
+      </div>
+    </div>
+  </footer>
+
+
+<!--Linked Javascript-->
+  <!--Font Awesome-->
+    <script src="https://use.fontawesome.com/7fa3cf30ae.js"></script>
+
+
+<!--Materialize Javascript-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+<!--Materialize button collapse screen (burger button)-->
+<script>
+ $(".button-collapse").sideNav();
+</script>
+
+ <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<!--Bootstrap Javascript-->
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+<!--Firebase-->
+    <script src= ></script>
+
+
+<!--API Calls and Modals-->
+  <script src="assets/complete.js"></script>
+
+<!--Underscore.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+
+
+
+ 
+</body>
+</html>

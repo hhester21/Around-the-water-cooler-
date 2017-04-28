@@ -1,238 +1,87 @@
-.container {
-    max-width: 100%;
+body {
+  background-color: black;
+  width: 100%;
 }
 
-header, main, footer {
-  padding-left: 300px;
-	text-align: center;
+#page-content-wrapper {
+  text-align: center;
 }
 
-.progress{
-  background-color: #fff3e0;
+header {
+  background-color: grey;
+  color: whitesmoke;
+  font-size: 50px;
+  margin-left: -5%;
+  margin-right: -5%;
+  margin-top: -2%;
+  /*width: 100%;*/
+  text-align: center;
+}
+
+.sign-up {
+  margin-top: 1%;
+  margin-right: 4%;
+  overflow: auto;
+}
+
+#sidebar-wrapper {
+  padding: 1%;
+}
+
+#feed-area {
+  width: 100%;
+}
+
+#feed-1 {
+  border-color: silver;
+  border-radius: 25%;
+  border-style: outset;
+  border-width: 5px;
+  color: pink;
   display: none;
-}
-
-.progress .indeterminate{
-  background-color: #e65100;
-}
-
-.resetText{
-	padding-right: 30px;
-}
-.getChartLine{
-	margin: 10px 0 10px 0;
-}
-
-#locationIconSpot {
-    /*display: none;*/
-}
-
-
-nav.top-nav{
-  height: 120px;
-  box-shadow: none;
-	background-color: transparent;
-}
-
-nav.top-nav a.page-title {
-  line-height: 120px;
-  font-size: 48px;
-	color: white;
-}
-
-nav .nav-wrapper {
-  position: relative;
-  height: 100%;
-}
-
-a.button-collapse.top-nav i {
-	line-height: 120px;
-  font-size: 48px;
-}
-
-a.button-collapse.top-nav {
-  position: absolute;
+  margin-right: 5px;
+  overflow: auto;
+  padding: 3%;
   text-align: center;
-  height: 48px;
-  width: 48px;
-  left: 7.5%;
-  top: 0;
-  float: none;
-  margin-left: 1.5rem;
-  color: white;
-  font-size: 36px;
-  z-index: 2;
+  width: 100%;
 }
 
-main{
-	/*background-image: url("../images/subtleBackground.png");*/
-	/*background-image: url("../images/stardust.png")*/
-	/*background-color: lightgray;*/
-	/*background-image: url('../images/grey_wash_wall.png');*/
-}
-
-.topicDiv {
-  border: 1px solid black;
-  clear: left;
-  height: 100px;
-  margin-top: 10px;
-}
-
-img {
-  float:left;
-}
-
-button {
-  height:50px;
-  width:200px;
-}
-
-.secondaryHead {
-	height:80px;
-	width: 100%;
-	background-image: url("../images/weather.jpg");
-	/*border: 2px solid black;*/
-	}
-	#mainImageRow, #mainImageCol, #imageContainer{
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	/*text-align: center;*/
-}
-
-#subtitleRow{
-	margin-bottom: 0;
-}
-
-.buttonIconImage{
-	height: 40px;
-	vertical-align: middle;
-	margin-left: 25%;
-}
-
-.commodityButton{
-	/*padding: 3px 75px 3px 5px;*/
-	width: 130px;
-	text-align: left;
-	margin-left: 3px;
-	padding-left: 3px;
-}
-
-input[type=text], textarea.materialize-textarea{
-	text-align: center;
-	height: 1rem;
-}
-
-.fa-cogs {
-font-size: 20px;
-}
-
-.locationIcon{
-    height: 100px;
-  margin-top: 5px;
+#feed-2 {
+  border-color: silver;
+  border-radius: 25%;
+  border-style: outset;
+  border-width: 5px;
+  color: skyblue;
+  display: none;
+  overflow: auto;
+  padding: 3%;
   text-align: center;
-  vertical-align: middle;
-  margin-bottom: -25px;
+  width: 100%;
 }
 
-#locationLabel{
-	margin-top: 15px;
+#feed-3 {
+  border-color: silver;
+  border-radius: 25%;
+  border-style: outset;
+  border-width: 5px;
+  color: #00ff00;
+  display: none;
+  margin-left: 5px;
+  margin-right: -10px;
+  overflow: auto;
+  padding: 3%;
+  text-align: center;
+  width: 100%;
 }
 
-#mapVis {
-    display: inline-block;
-    margin: 0 auto;
+footer {
+  background-color: orange;
+  margin-left: -3%;
+  margin-right: -10%;
+  margin-top: 10%;
+  overflow: visible;
+  padding: 3%;
+  text-align: center;
+  width: 150%;
 }
 
- body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
-
-#chartjsDiv {
-    /*display: none;*/
-    /*height: 500px;
-    width: 1000px;*/
-    margin: 0 auto;
-}
-
-.modal-content p{
-  text-align: left;
-}
-
-.fadeOutIcon {
-    opacity: .4;
-}
-
-#menu li {
-    display: inline;
-}
-
-.btn-flat.picker__close, .btn-flat.picker__today, .picker__day.picker__day--infocus.picker__day--today.picker__day--highlighted {
-	color: #e65100;
-}
-
-.picker__day.picker__day--infocus.picker__day--today.picker__day--selected.picker__day--highlighted, .picker__day.picker__day--infocus.picker__day--selected.picker__day--highlighted{
-	color: white;
-	background-color: #e65100;
-}
-
-.picker__weekday-display{
-	background-color:#e65100;
-}
-
-.picker__date-display{
-	background-color: #ef6c00 ;
-}
-
-button.glowEffect{
-	-webkit-animation-name: greenPulse;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes greenPulse {
-	from { background-color: #00c853 ; -webkit-box-shadow: 0 0 9px #333; }
-  50% { background-color: #00e676  ; -webkit-box-shadow: 0 0 18px #00e676; }
-  to { background-color: #00c853 ; -webkit-box-shadow: 0 0 9px #333; }
-}
-
-
-
-@media only screen and (max-width: 992px){
-	header, main, footer {
-  	padding-left: 0;
-		/*text-align: left;*/
-	}
-}
-
-@media only screen and (max-width: 992px){
-	nav .nav-wrapper a.page-title {
-		font-size: 36px;
-	}
-}
-
-@media only screen and (min-width: 601px){
-	nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-  	height: 64px;
-  	line-height: 64px;
-	}
-}
-
-@media only screen and (min-width: 601px){
-	.container {
-  	width: 85%;
-	}
-}
-
-@media only screen and (max-width: 992px){
-	nav .nav-wrapper, #mapVis {
-
-	}
-}
