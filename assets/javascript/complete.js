@@ -32,9 +32,9 @@ Javascript for Calling the newsapi.org API
   var removeFeed2 = $('#remove-feed-2');
   var removeFeed3 = $('#remove-feed-3');
 
-  
 
-  $('#add-feed').on('click', function(event){
+  // Feed Fader Function Logic
+  function fader(event){
     event.preventDefault();
     event.stopPropagation();
     if ((feed1 === false) && (feed2 === false) && (feed3 === false)){
@@ -97,9 +97,29 @@ Javascript for Calling the newsapi.org API
         backdrop: true,
         keyboard: true,
         focus: true,
-        show: true});
+        show: true
+      });
     }
-  });
+  };
+
+// 'Add a Feed' User Decision Modal
+function addFeed(event){
+  event.preventDefault();
+  event.stopPropagation();
+  $('#add-a-feed-modal').modal({
+    backdrop: true,
+    keyboard: true,
+    focus: true,
+    show: true
+  })
+}
+
+
+
+  $('#add-feed').on('click', function(event){
+    addFeed(event);
+    fader(event);
+});    
 
   removeFeed1.on('click', function(){
     targetFeed1.fadeOut(1500);
@@ -119,6 +139,7 @@ Javascript for Calling the newsapi.org API
 
   
  
+
 $('#query-submit').on('click', function(event) {
   event.preventDefault();
   event.stopPropagation();
