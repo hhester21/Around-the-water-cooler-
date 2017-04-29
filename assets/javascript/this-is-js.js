@@ -40,11 +40,7 @@ Javascript for Calling the newsapi.org API
 var w = c.width;
 var h = c.height;
 var img = $(".stoppable img")[0];
-// setTimeout(function () {
-//     c.getContext('2d').drawImage(img, 0, 0, w, h);
-//     $(img).hide();
-//     $(c).show();
-// },10000);
+
 
 console.log(sourceChoice);
 
@@ -249,7 +245,16 @@ $(document).ready(function(){
     addFeed(event);
     saveFeed();
     fader();
-});    
+});
+
+// $(document).ready(function(){
+
+//   $('#edit-feed1').on('click', function(event){
+//     addFeed(event)
+//     saveFeed();
+//     fader();
+//   })
+// })    
 
   removeFeed1.on('click', function(){
     targetFeed1.fadeOut(1500);
@@ -266,24 +271,6 @@ $(document).ready(function(){
     feed3 = false;
     $('#add-feed').addClass('btn-info');
   });
-
-  
- 
-
-// $('#query-submit').on('click', function(event) {
-//   event.preventDefault();
-//   event.stopPropagation();
-//   userInput = $('#user-query-input').val();
-//   console.log(userInput);
-// });
-
- $('#time').on('click', function(){
-  console.log("CLICK");
-
-    // Set sourceQuery equal to user input
-      var sourceQuery ="hacker-news"; 
-      console.log(sourceQuery);
-      // $(this).data("source");
 
       
  console.log(queryURL);
@@ -386,7 +373,7 @@ $("#submit").on("click", function() {
         } 
     }   
 });
-});
+// });
 
 
 /***************************************************************************************************************
