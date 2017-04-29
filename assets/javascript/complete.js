@@ -133,7 +133,7 @@ function saveFeed(){
 
 function apiCall(){
       // Set the URL and API key to a variable, queryURL
-  var queryURL ="https://newsapi.org/v1/articles?source=" + sourceChoice + "&sortBy=latest&apiKey=4d56dbec54a3487b9640e2c5ec04077e";
+  var queryURL ="https://newsapi.org/v1/articles?source=" + sourceChoice + "&apiKey=4d56dbec54a3487b9640e2c5ec04077e";
   console.log(queryURL);
    // Use ajax to make a call to the api with the "GET" method.
       $.ajax({url:queryURL,method:"GET"})
@@ -147,7 +147,7 @@ function apiCall(){
 
       for(var i = 0; i < 10; i++){
     // Create a variable containing a <div> tag
-        var articleDiv = $('<div> "HI"');
+        var articleDiv = $('<div>');
 
     // Use the data from the API response to set variables for each piece of data that is retrieved
         source = response.source;
@@ -189,9 +189,9 @@ function apiCall(){
        articleDiv.append(authorText);  
 
     // and the contents of the articleDiv variable to the #articleArea <div>
-        $('#articleArea').append(articleDiv);
+        $('#feed-1').append(articleDiv);
 
-        $('#feed1').append(resultImage);
+        $('#feed-1').append(resultImage);
       }
 
       var imageTags = $('img');
