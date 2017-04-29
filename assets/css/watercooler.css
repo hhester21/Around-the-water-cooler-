@@ -1,5 +1,7 @@
 body {
   background-color: black;
+  font-family: 'Baloo';
+  padding: 1%;
   width: 100%;
 }
 
@@ -8,7 +10,8 @@ body {
 }
 
 header {
-  background-color: grey;
+  background-color: black;
+  border-radius: 10%;
   color: whitesmoke;
   font-size: 50px;
   margin-left: -5%;
@@ -34,13 +37,13 @@ header {
 
 #feed-1 {
   border-color: silver;
-  border-radius: 25%;
-  border-style: outset;
+  border-radius: 10%;
+  border-style: groove;
   border-width: 5px;
   color: pink;
   display: none;
   margin-right: 5px;
-  overflow: auto;
+  overflow: scroll;
   padding: 3%;
   text-align: center;
   width: 100%;
@@ -48,7 +51,7 @@ header {
 
 #feed-2 {
   border-color: silver;
-  border-radius: 25%;
+  border-radius: 10%;
   border-style: outset;
   border-width: 5px;
   color: skyblue;
@@ -61,14 +64,14 @@ header {
 
 #feed-3 {
   border-color: silver;
-  border-radius: 25%;
+  border-radius: 10%;
   border-style: outset;
   border-width: 5px;
   color: #00ff00;
   display: none;
   margin-left: 5px;
   margin-right: -10px;
-  overflow: auto;
+  overflow: scroll;
   padding: 3%;
   text-align: center;
   width: 100%;
@@ -98,3 +101,28 @@ footer {
   font-weight: bolder;
   text-align: center;
 }
+
+.modal-header {
+  background-color: black;
+}
+
+.stoppable {
+    width: 100px;
+    height: 100px;
+}
+.stoppable canvas, .stoppable img {
+    width: 100%;
+    height: 100%;
+}
+img {
+    margin-top: 1%;
+    width: 100px;
+    height: 100px;
+}
+
+#edit-feed1
+
+#edit-feed2
+
+#edit-feed3
+
