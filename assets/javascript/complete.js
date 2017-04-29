@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+
 
 /***************************************************************************************************************
 Javascript for Calling the newsapi.org API
@@ -32,9 +32,14 @@ Javascript for Calling the newsapi.org API
   var removeFeed2 = $('#remove-feed-2');
   var removeFeed3 = $('#remove-feed-3');
 
+  var sourceChoice = "";
+  var categoryChoice = "";
+  var callSource = "";
+
+console.log(sourceChoice);
 
   // Feed Fader Function Logic
-  function fader(event){
+  function fader(){
     event.preventDefault();
     event.stopPropagation();
     if ((feed1 === false) && (feed2 === false) && (feed3 === false)){
@@ -111,60 +116,35 @@ function addFeed(event){
     keyboard: true,
     focus: true,
     show: true
+  });
+}
+
+function saveFeed(){
+  event.stopPropagation();
+   $('#save-feed').on('click', function(){
+    sourceChoice = $('#source-choice').val();
+    console.log(sourceChoice);
+    categoryChoice = $('#category-choice').val();
+    console.log(categoryChoice);
+    apiCall();
+    $('#add-a-feed-modal').modal('hide');
   })
 }
 
-
-
-  $('#add-feed').on('click', function(event){
-    addFeed(event);
-    fader(event);
-});    
-
-  removeFeed1.on('click', function(){
-    targetFeed1.fadeOut(1500);
-    feed1 = false;
-    $('#add-feed').addClass('btn-info');
-  });
-  removeFeed2.on('click', function() {
-    targetFeed2.fadeOut(1500);
-    feed2 = false;
-    $('#add-feed').addClass('btn-info');
-  });
-  removeFeed3.on('click', function(){
-    targetFeed3.fadeOut(1500);
-    feed3 = false;
-    $('#add-feed').addClass('btn-info');
-  });
-
-  
- 
-
-$('#query-submit').on('click', function(event) {
-  event.preventDefault();
-  event.stopPropagation();
-  userInput = $('#user-query-input').val();
-  console.log(userInput);
-});
-
- $('#time').on('click', function(){
-  console.log("CLICK");
-
-    // Set sourceQuery equal to user input
-      var sourceQuery ="hacker-news"; 
-      console.log(sourceQuery);
-      // $(this).data("source");
-
-    // Set the URL and API key to a variable, queryURL
-      var queryURL ="https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=4d56dbec54a3487b9640e2c5ec04077e";
- console.log(queryURL);
-    // Use ajax to make a call to the api with the "GET" method.
+function apiCall(){
+      // Set the URL and API key to a variable, queryURL
+  var queryURL ="https://newsapi.org/v1/articles?source=" + sourceChoice + "&sortBy=latest&apiKey=4d56dbec54a3487b9640e2c5ec04077e";
+  console.log(queryURL);
+   // Use ajax to make a call to the api with the "GET" method.
       $.ajax({url:queryURL,method:"GET"})
 
     // When it completes the call and receives a response...
 
       .done(function(response){
         console.log(response);
+
+
+
       for(var i = 0; i < 10; i++){
     // Create a variable containing a <div> tag
         var articleDiv = $('<div> "HI"');
@@ -213,12 +193,60 @@ $('#query-submit').on('click', function(event) {
 
         $('#feed1').append(resultImage);
       }
+
       var imageTags = $('img');
       imageTags.width(200);
       imageTags.css({'border-radius': '20%'});
       // console.log(title);
       });
-    });
+}
+
+
+$(document).ready(function(){
+
+  $('#add-feed').on('click', function(event){
+    addFeed(event);
+    saveFeed();
+    fader();
+});    
+
+  removeFeed1.on('click', function(){
+    targetFeed1.fadeOut(1500);
+    feed1 = false;
+    $('#add-feed').addClass('btn-info');
+  });
+  removeFeed2.on('click', function() {
+    targetFeed2.fadeOut(1500);
+    feed2 = false;
+    $('#add-feed').addClass('btn-info');
+  });
+  removeFeed3.on('click', function(){
+    targetFeed3.fadeOut(1500);
+    feed3 = false;
+    $('#add-feed').addClass('btn-info');
+  });
+
+  
+ 
+
+// $('#query-submit').on('click', function(event) {
+//   event.preventDefault();
+//   event.stopPropagation();
+//   userInput = $('#user-query-input').val();
+//   console.log(userInput);
+// });
+
+ $('#time').on('click', function(){
+  console.log("CLICK");
+
+    // Set sourceQuery equal to user input
+      var sourceQuery ="hacker-news"; 
+      console.log(sourceQuery);
+      // $(this).data("source");
+
+      
+ console.log(queryURL);
+   
 });
 
 /***************************************************************************************************************
@@ -302,5 +330,6 @@ $("#submit").on("click", function() {
                 console.log("numSubMenus[z]: ", numSubMenus[z]);
         } 
     }   
+});
 });
 });
