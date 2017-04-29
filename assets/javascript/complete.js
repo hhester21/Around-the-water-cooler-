@@ -1,12 +1,7 @@
-
-
-
 /***************************************************************************************************************
 Javascript for Calling the newsapi.org API
 ****************************************************************************************************************/
-
-   console.log("READY!");
-  // Initialize variables
+// Initialize variables
   var source = "";
   var sortBy = "";
   var author = "";
@@ -17,7 +12,7 @@ Javascript for Calling the newsapi.org API
   var publishTime = "";
   var userInput = "";
 
-  // Visibility Variables
+    // Visibility Variables
   var feed1 = false;
   var feed2 = false;
   var feed3 = false;
@@ -36,218 +31,10 @@ Javascript for Calling the newsapi.org API
   var categoryChoice = "";
   var callSource = "";
 
-console.log(sourceChoice);
-
-  // Feed Fader Function Logic
-  function fader(){
-    event.preventDefault();
-    event.stopPropagation();
-    if ((feed1 === false) && (feed2 === false) && (feed3 === false)){
-      targetFeed1.fadeIn(1500);
-      targetFeed1.css({
-        "display" : "inline",});
-      feed1 = true;
-    }
-    else if((feed1 === true) && (feed2 === false) && (feed3 === false)){
-      targetFeed2.fadeIn(1500);
-      targetFeed2.css({
-        "display" : "inline",
-      });
-      feed2 = true;
-    }
-    else if((feed1 === true) && (feed2 === true) && (feed3 === false)){
-      targetFeed3.fadeIn(1500);
-      targetFeed3.css({
-        "display" : "inline",
-      });
-      feed3 = true;
-      $('#add-feed').removeClass('btn-info');
-      // $('#add-feed').attr({
-      //   'data-toggle': 'modal',
-      //   'data-target': '#myModal',
-      // });
-      }
-    else if((feed1 === false) && (feed2 === true) && (feed3 === false)){
-      targetFeed1.fadeIn(1500);
-      targetFeed1.css({
-        "display" : "inline",
-      });
-      feed1 = true;
-    }
-    else if((feed1 === false) && (feed2 === true) && (feed3 === true)){
-      targetFeed1.fadeIn(1500);
-      targetFeed1.css({
-        "display" : "inline",
-      });
-      feed1 = true;
-      $('#add-feed').removeClass('btn-info');
-    }
-    else if((feed1 === false) && (feed2 === false) && (feed3 === true)){
-      targetFeed1.fadeIn(1500);
-      targetFeed1.css({
-        "display" : "inline",
-      });
-      feed1 = true;
-    }
-    else if((feed1 === true) && (feed2 === false) && (feed3 === true)){
-      targetFeed2.fadeIn(1500);
-      targetFeed2.css ({
-        "display" : "inline",
-      });
-      feed2 = true;
-      $('#add-feed').removeClass('btn-info');
-    }
-    else if ((feed1 === true) && (feed2 === true) && (feed3 === true)){
-      $('#errorModal').modal({
-        backdrop: true,
-        keyboard: true,
-        focus: true,
-        show: true
-      });
-    }
-  };
-
-// 'Add a Feed' User Decision Modal
-function addFeed(event){
-  event.preventDefault();
-  event.stopPropagation();
-  $('#add-a-feed-modal').modal({
-    backdrop: true,
-    keyboard: true,
-    focus: true,
-    show: true
-  });
-}
-
-function saveFeed(){
-  event.stopPropagation();
-   $('#save-feed').on('click', function(){
-    sourceChoice = $('#source-choice').val();
-    console.log(sourceChoice);
-    categoryChoice = $('#category-choice').val();
-    console.log(categoryChoice);
-    apiCall();
-    $('#add-a-feed-modal').modal('hide');
-  })
-}
-
-function apiCall(){
-      // Set the URL and API key to a variable, queryURL
-  var queryURL ="https://newsapi.org/v1/articles?source=" + sourceChoice + "&apiKey=4d56dbec54a3487b9640e2c5ec04077e";
-  console.log(queryURL);
-   // Use ajax to make a call to the api with the "GET" method.
-      $.ajax({url:queryURL,method:"GET"})
-
-    // When it completes the call and receives a response...
-
-      .done(function(response){
-        console.log(response);
-
-
-
-      for(var i = 0; i < 10; i++){
-    // Create a variable containing a <div> tag
-        var articleDiv = $('<div>');
-
-    // Use the data from the API response to set variables for each piece of data that is retrieved
-        source = response.source;
-        sortBy = response.sortBy;    
-        title = response.articles[i].title;
-        author = response.articles[i].author;
-        description = response.articles[i].description;
-        articleURL = response.articles[i].url;
-        imageURL = response.articles[i].urlToImage;
-        publishTime = response.articles[i].publishedAt;
-
-    // Create variables for the HTML of the text that will be displayed on the page.
-        sourceText = $('<span>').text("Source: " + source);
-        sortByText = $('<span>').text("Sorted by: " + sortBy); 
-        titleText = $('<span>').html("Title: " + title + '<br>');
-        authorText = $('<span>').html("Author: " + author + '<br>');
-        descriptionText = $('<span>').text("Description: " + description);
-        articleURLText = $('<span>').text("Article URL: " + articleURL);
-        imageURLText = $('<span>').text("Image URL: " + imageURL);
-        publishTimeText = $('<p>').text("Published at: " + publishTime);
-
-        console.log(title);
-        console.log(author);
-
-    // Set resultImage to an <img> tag
-        var resultImage = $('<img>');
-
-    // Give the <img> tag an attribute 
-        resultImage.attr('src',imageURL);
-
-      // Append the article image to the articleDiv
-        articleDiv.append(resultImage);
-
-    // Append the title of the article to the articleDiv
-        articleDiv.append(titleText);
-        // console.log(title);
-
-    // Append the author of the article to the articleDiv
-       articleDiv.append(authorText);  
-
-    // and the contents of the articleDiv variable to the #articleArea <div>
-        $('#feed-1').append(articleDiv);
-
-        $('#feed-1').append(resultImage);
-      }
-
-      var imageTags = $('img');
-      imageTags.width(200);
-      imageTags.css({'border-radius': '20%'});
-      // console.log(title);
-      });
-}
-
-
-$(document).ready(function(){
-
-  $('#add-feed').on('click', function(event){
-    addFeed(event);
-    saveFeed();
-    fader();
-});    
-
-  removeFeed1.on('click', function(){
-    targetFeed1.fadeOut(1500);
-    feed1 = false;
-    $('#add-feed').addClass('btn-info');
-  });
-  removeFeed2.on('click', function() {
-    targetFeed2.fadeOut(1500);
-    feed2 = false;
-    $('#add-feed').addClass('btn-info');
-  });
-  removeFeed3.on('click', function(){
-    targetFeed3.fadeOut(1500);
-    feed3 = false;
-    $('#add-feed').addClass('btn-info');
-  });
-
   
- 
 
-// $('#query-submit').on('click', function(event) {
-//   event.preventDefault();
-//   event.stopPropagation();
-//   userInput = $('#user-query-input').val();
-//   console.log(userInput);
-// });
 
- $('#time').on('click', function(){
-  console.log("CLICK");
 
-    // Set sourceQuery equal to user input
-      var sourceQuery ="hacker-news"; 
-      console.log(sourceQuery);
-      // $(this).data("source");
-
-      
- console.log(queryURL);
-   
-});
 
 /***************************************************************************************************************
 Javascript for Modal

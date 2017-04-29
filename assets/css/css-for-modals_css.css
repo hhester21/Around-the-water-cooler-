@@ -1,0 +1,28 @@
+     /*just a bells and whistles for modals*/
+    .modal-dialog {
+        width: 20%;
+    }
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    input[type=email], input[type=password], input[type=text] {
+        border: 1px solid #ccc;
+        outline-style:none;
+    }
+
+    input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
+    box-shadow:0 0 1.5px 1.5px #ccc;
+    border-color: #ccc;
+}
+
+    input[type=email]:focus::-webkit-input-placeholder ,input[type=password]:focus::-webkit-input-placeholder ,input[type=text]:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.alerts {
+    color: red;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
