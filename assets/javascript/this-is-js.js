@@ -292,7 +292,8 @@ $(document).ready(function() {
         
         //console.log("checkedoff: ", checkedoff);
         //$("checkedoff").removeClass("checked");
-       // $('.active input[type=checkbox]').trigger("click");
+       $('.active input[type=checkbox]').trigger("click");
+
     });
 });
 
