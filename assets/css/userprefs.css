@@ -1,0 +1,149 @@
+.sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+}
+
+.sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+}
+
+.sidebar-nav .navbar li {
+    float: none;
+    display: block;
+}
+
+.sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#linklist li {
+    text-align: left;
+}
+
+h3 {
+    text-align: center;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+.tabs-left, .tabs-right {
+  border-bottom: none;
+  padding-top: 2px;
+}
+
+.tabs-left {
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left>li, .tabs-right>li {
+  float: none;
+  margin-bottom: 2px;
+}
+
+.tabs-left>li {
+  margin-right: -1px;
+}
+
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-color: #bbb;
+  border-right-color: transparent;
+}
+
+.tabs-left>li.active>a:focus {
+  border-color: #bbb;
+  border-right-color: transparent;
+  background-color: lightsteelblue;
+}
+
+.tabs-left>li>a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  display:block;
+}
+
+img, #tech img {
+    height: 40%;
+    width: 40%;
+}
+
+#logo {
+    height: 30%;
+    width: 30%;
+}
+
+.modal-footer {
+    align-self: center;
+}
+
+
+
+.tab-content {
+    margin-left: 30px;
+}
+
+#uslist #worldlist #bandflist #sportslist #poplist #techlist #handwlist #stylelist {
+    margin-left: 20px;
+}
+
+#linklist {
+    min-width: 220px;
+}
+
+#modalButtons {
+    width: 220px;
+    padding-top: 30px;
+}
+
+#UserPrefsButton {
+  float: left;
+  width: 45%;
+}
+
+#UserPrefsButton {
+  float: left;
+  width: 45%;
+}
+
+#UserPrefsModal {
+  width: 70%;
+}
+
+#LoginButton {
+  float: right;
+  width: 45%;
+}
+
+#LoginModal {
+  width: 30%;
+}
+
+.modal {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal-content {
+  width: 130%;
+}
+
+#main a {
+    font-size: 20px;
+}
+
+.sidebar-brand {
+    margin-block-end: 50px;
+}
+
+#sidebar-wrapper {
+    height:   500px;
+}
+
+.glyphicon {
+    margin-top: 10px;
+}

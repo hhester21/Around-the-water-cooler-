@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Around the water cooler </title>
+
+    <!--Font Awesome-->
+    <script src="https://use.fontawesome.com/7fa3cf30ae.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
+    <!-- Normalize.css (Used instead of the reset.css that we were shown in class, it's kept up to date to work on all modern browsers)-->
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+
+    <!--Materialize CSS-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">-->
+
+    <!-- CSS (mainly used for materialize overrides)-->
+    <link rel="stylesheet" type="text/css" href="css/userprefs.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/watercooler.css">    
+    <link rel="stylesheet" type="text/js" href="assets/javascript/carousel.js">
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- bootstrap javascript-->
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+    <!--Firebase-->
+    <script src= ></script>
+    <style>
+    
+    img {
+        margin-bottom: 20px;
+    }
+    </style>
+  </head>
+
+<body>
+  <!--sidebar and header-->
+  <header>
+    <!--Top Header-->
+    <nav class="top-nav light-blue darken-4">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a class="page-title">Around the water cooler</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--Collapsible Button-->
+    <div class="container">
+      <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+
+    <!--Side Bar Menu-->
+    <ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform: translateX(0%);">
+      
+      <!--Subject Selection-->
+      <li>
+        <h6>Subjects</h6>
+      </li>
+      <li>
+         <img id ="" class=""  alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class=""  alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+         <img id ="" class=""  alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class=""  alt= >
+        <button id="" class= > text here</button>
+      </li>
+      <li>
+        <img id ="" class=""  alt= >
+        <button id="" class= > text here</button>
+      </li>
+
+
+      <!--Buttons-->
+      <!--Reset Button-->
+      <li>
+        <span class="resetText">Reset</span><button id="resetButton" class="btn-floating red accent-4 waves-effect waves-light" type="submit" name="action"><i class="material-icons">refresh</i></button>
+      </li>
+      <!--Get Chart Button-->
+    </ul>
+  </header>
+
+<!--Main Site Container (DIV)-->
+  <main>
+    <div class="container mainDataContainer">
+      <!--Subtitle-->
+      <div class="row" id="subtitleRow">
+        <div class="col s12">
+          <p>User customized </p>
+        </div>
+      </div>
+      <!--progress bar-->
+      <div class="row">
+        <div class="col s12">
+          <div class="progress">
+            <div class="indeterminate"></div>
+          </div>
+        </div>
+      </div>
+      <!--Collapsible menu-->
+      <div class="row">
+        <div class="col s12">
+          <ul class="collapsible" data-collapsible="accordion">            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!--Footer-->
+  <footer class="page-footer orange darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+            <h4 class="white-text">Creators:</h4>
+            <ul>
+                <li><a class="grey-text text-lighten-3" href="#!"></a>Daryl</li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Haley Hester</li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Artur </li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a> Omar Imam</li>
+            </ul>
+        </div>
+      </div>
+    </div>    
+    <div class="footer-copyright">
+        <div class="container">
+            2017 Around the Water Cooler
+        </div>
+    </div>
+  </footer>
+
+<!-- Button to initialize Login modal -->
+<div class="container"> 
+  <button class="btn btn-primary btn-lg" href="" data-toggle="modal" data-target="#LoginModal">Sign In / Register</button>
+</div>  
+
+<!-- Login Modal begins -->
+<div class="modal fade bs-modal-sm" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content"><br>
+        <div class="bs-example bs-example-tabs">
+            <center><img src="images/images.jpg" alt=""><br></center>
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#Signintab" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>              
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">        
+        <!-- Sign In Tab begins -->
+        <div class="tab-pane fade active in" id="Signintab">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">User Name:</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control input-medium" placeholder="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control input-medium" type="password" placeholder="********">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div><br>
+            <p>Forgot your <a href="#">username</a> or <a href="#">password</a>?</p>
+            </fieldset>
+            </form>
+        </div>
+    <!-- Sign In Tab ends -->
+
+    <!--Register section begins -->
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="getEmail" name="getEmail" class="form-control input-large" type="text" placeholder="user@gmail.com" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">User Name:</label>
+              <div class="controls">
+                <input id="getUserid" name="getUserid" class="form-control input-large" type="text" placeholder="" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="getPassword" name="getPassword" class="form-control input-large" type="password" placeholder="********" required="">
+                <em>1-8 Characters</em>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+              <div class="controls">
+                <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********" required="">
+              </div>
+            </div>
+            
+            <!-- Multiple Radios (inline) -->
+            <br>
+            <div class="control-group">
+              <label class="control-label" for="humancheck">Humanity Check:</label>
+              <div class="controls">
+                <label class="radio inline" for="humancheck-0">
+                  <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
+                <label class="radio inline" for="humancheck-1">
+                  <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button to initialize User Preferences modal -->
+<div class="container"> 
+  <button class="btn btn-primary btn-sm" href="" data-toggle="modal" data-target="#UserPrefsModal">Preferences</button>
+</div><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="sidebar-nav">
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="visible-xs navbar-brand">Sidebar menu</span>
+                    </div>
+                    <div class="navbar-collapse collapse sidebar-navbar-collapse" id="main">
+                    <!--<ul class="nav navbar-nav dropdown-menu" id="linklist" role="menu">-->
+                        <!-- User preference buttons appear here. -->
+                    <!--</ul>-->
+                    </div><!--/.nav-collapse -->        
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-sm-9">-->
+            <!--Main content goes here-->
+        <!--</div>-->
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="sidebar-nav">
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="navbar-collapse collapse sidebar-navbar-collapse" id="sublinks">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="buttons-appear-here">
+</div>
+
+<!-- User Preferences Modal begins -->
+<div class="modal fade bs-modal-sm" id="UserPrefsModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content"><br>
+            <div class="bs-example bs-example-tabs">
+                <span><center><img src="../images/images.jpg" alt="" id="logo"><br></center></span>
+
+                <h3>Customize your experience</h3>
+
+                <div class="row">
+                    <div  class="col-sm-12">                    
+                        <hr/>
+
+                        <!-- Nav tabs -->
+                        <div class="col-xs-5">          
+                            <ul class="nav nav-tabs tabs-left">
+                                <li class="active"><a href="#us" data-toggle="tab">U.S.</a></li>
+                                <li><a href="#world" data-toggle="tab">World</a></li>
+                                <li><a href="#bandf" data-toggle="tab">Business and Finance</a></li>
+                                <li><a href="#sports" data-toggle="tab">Sports</a></li>
+                                <li><a href="#pop" data-toggle="tab">TV and Celebrity</a></li>
+                                <li><a href="#tech" data-toggle="tab">Technology</a></li>
+                                <li><a href="#handw" data-toggle="tab">Health and Wellness</a></li>
+                                <li><a href="#style" data-toggle="tab">Style</a></li>
+                            </ul>
+                        </div>   <!-- End of Nav tabs -->
+
+                        <!-- Tab panes -->
+                        <div class="col-xs-7">                              
+                            <div class="tab-content" id="tab-content">
+
+                            <!-- US tab checkboxes -->
+                                <div class="tab-pane active" id="us">
+                                    <img src="../images/map_usa_layers.gif">
+                                    <div id="uslist" value="U.S.">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-economy">Economy</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-crime">Crime</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-politics">Politics</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-technology">Technology</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-education">Education</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-eande">Energy and Environment</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-military">Military</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-general">General</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="us-for-sale">For Sale</label>
+                                        </div>
+                                    </div>
+                                </div>  <!-- End of US tab checkboxes -->                
+
+                            <!-- World tab checkboxes-->
+                                    <div class="tab-pane data-toggle="checkbox" " id="world">
+                                        <img src="../images/Globe_Atlantic.svg">
+                                        <div id="worldlist" value="World">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-economy">Economy</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-crime">Crime</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-politics">Politics</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-technology">Technology</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-education">Education</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-eande">Energy and Environment</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-military">Military</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-general">General</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="world-for-sale">For Sale</label>
+                                            </div>                  
+                                        </div>
+                                    </div>  <!-- End of World tab checkboxes -->
+
+                            <!-- Business and Finance tab checkboxes -->
+                                    <div class="tab-pane" id="bandf">
+                                        <img src="../images/small-business-and-tax-accounting-services-i-evolve-financial-services-3nuQvU-clipart.jpg">
+                                        <div id="bandflist"  value="Business and Finance">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="bandf-markets">Markets</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="bandf-real-estate">Real Estate</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="bandf-law">Law</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="bandf-money">Money</label>
+                                            </div>                                                
+                                        </div>
+                                    </div>  <!-- End of Business and Finance tab checkboxes -->                                
+
+                            <!-- Sports tab checkboxes-->
+                                    <div class="tab-pane" id="sports">
+                                        <img src="../images/images (1).jpg">
+                                        <div id="sportslist" value="Sports">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-nfl">NFL</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-nba">NBA</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-mlb">MLB</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-nhl">NHL</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-ncaa">NCAA</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-nascar">NASCAR</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-boxing">Boxing</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-MMA">MMA</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-golf">Golf</label>
+                                            </div>  
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-wrestling">Wrestling</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-handf">Hunting and Fishing</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-olympics">Olympics</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="sports-tennis">Tennis</label>
+                                            </div>                                
+                                        </div>
+                                    </div>  <!-- End of Sports tab checkboxes -->
+
+                            <!-- TV and Celebrity tab checkboxes -->
+                                    <div class="tab-pane" id="pop">
+                                        <img src="../images/11318697-3d-illustration-of-film-Stock-Illustration-music-film-video.jpg">
+                                        <!--<h4><strong>The Rythym is Gonna Get You</strong></h4>-->
+                                        <div id="poplist" value="TV and Celebrity">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="pop-music">Music</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="pop-tv">TV and Film</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="pop-broadway">Broadway</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="pop-celeb">Celebrity</label>
+                                            </div>                                                                 
+                                        </div>
+                                    </div>  <!-- End of TV and Celebrity tab checkboxes -->
+
+                            <!-- Technology tab checkboxes -->
+                                    <div class="tab-pane" id="tech">
+                                        <img src="../images/SEO-Talent-vs-Technology.jpg">
+                                        <div id="techlist" value="Technology">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="tech-space">Space</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="tech-auto">Automotive</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="tech-prosthetics">Prosthetics</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="tech-military">Military</label>
+                                            </div>  
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="tech-ai">Aritificial Intelligence</label>
+                                            </div>      
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="tech-energy">Sustainable Energy</label>
+                                            </div>  
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="tech-connectivity">Connectivity</label>
+                                            </div>   
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="tech-genetics">Genetics</label>
+                                            </div> 
+                                            <div class="checkbox">
+                                                <label><input class="checkbox" type="checkbox" value="" id="tech-innovators">Innovators</label>
+                                            </div>                                                   
+                                        </div>
+                                    </div>  <!-- End of Technology tab checkboxes -->
+
+                            <!-- Health and Wellness tab checkboxes -->
+                                    <div class="tab-pane" id="handw">
+                                        <img src="../images/images (3).jpg">
+                                        <div id="handwlist" value="Health and Wellness">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="handw-fitness">Fitness</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="handw-nutrition">Nutrition</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="handw-family">Family</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="handw-mind">Mind</label>
+                                            </div>  
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="handw-aging">Aging</label>
+                                            </div>  
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="handw-dandc">Diseases / Conditions</label>
+                                            </div>                                                                                           
+                                        </div>
+                                    </div>  <!-- End of Health and Wellness tab checkboxes -->
+
+                            <!-- Style tab checkboxes -->
+                                    <div class="tab-pane" id="style">
+                                        <img src="../images/disney-festival-style-feature-242x141.jpg">
+                                        <div id="stylelist" value="Style">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="style-men">Men</label>
+                                            </div>  
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="style-women">Women</label>
+                                            </div>  
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="style-children">Children</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="style-fashion">Fashion</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="style-beauty">Beauty</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="style-runway">Runway</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="" id="style-events">Events</label>
+                                            </div>                                                                                                                                   
+                                        </div>
+                                    </div>  <!-- End of Style tab checkboxes -->
+                            </div>                            
+                        </div>  <!-- End of Tab panes -->                        
+                    </div>
+                </div>  <!-- End of "row" -->
+            </div>
+            <div class="modal-footer">                
+                <center>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="submit">Save My Preferences</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="ExitNoSave">Exit Without Saving</button>
+                    <button type="button" class="btn btn-primary" id="SelectAll">Select \ Clear All</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+<!--Moment.js-->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+<!--Materialize Javascript-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+<!--Materialize button collapse screen (burger button)-->
+<script>
+ $(".button-collapse").sideNav();
+</script>
+
+<!--API and firebase calls-->  
+<script src="assets/newsapi.js"></script>
+
+</body>
+</html>
